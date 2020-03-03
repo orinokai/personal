@@ -1,10 +1,52 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import Center from "../common/center"
+import Switcher from "../common/switcher"
+import Img from "gatsby-image"
 
-const Hero = () => (
-  <div>
-    <h1>Hey, I’m Rob, a freelance web developer based in wild west Cornwall.</h1>
-    <img src="" />
-  </div>
-)
+const Wrapper = styled(Center)`
+  max-width: ${props => props.theme.frameWidth};
+  padding: 0 ${props => props.theme.frameGutter};
+  padding-top: 4vw;
+`
+
+const HeroText = styled.h1`
+  position: relative;
+  margin-top: 6rem;
+  z-index: 1;
+`
+
+const HeroTextOverlap = styled.div`
+  position: absolute;
+  right: -33%;
+`
+
+const HeroImg = styled(Img)`
+  box-shadow: 0px 0px 0px 0px rgba(222,222,222,1);
+`
+
+const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query MyQuery {
+      file(relativePath: { eq: "portrait.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Wrapper as={Switcher} forwardedAs="section" breakpoint="20ch" space="1rem">
+      <HeroText>
+        <HeroTextOverlap>Hey, I’m Rob, a freelance web developer based in wild west Cornwall.</HeroTextOverlap>
+      </HeroText>
+      <HeroImg sizes={{ ...data.file.childImageSharp.fluid, aspectRatio: 4 / 5 }} fluid={data.file.childImageSharp.fluid} backgroundColor="#E1E5E8" alt="Rob Stanford" />
+    </Wrapper>
+  )
+}
 
 export default Hero

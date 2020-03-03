@@ -12,6 +12,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -19,7 +21,7 @@ module.exports = {
         fonts: [
           {
             family: `Poppins`,
-            variants: [`400`, `500`, `700`]
+            variants: [`400`, `500`, `600`, `700`]
           },
           {
             family: `Roboto`
@@ -34,8 +36,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
