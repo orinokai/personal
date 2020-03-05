@@ -24,6 +24,7 @@ const HeroTextOverlap = styled.div`
     position: absolute;
     right: -33%;
     margin-top: 6rem;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
   }
 `
 
@@ -36,7 +37,7 @@ const Hero = () => {
       file(relativePath: { eq: "portrait.jpg" }) {
         childImageSharp {
           fluid {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -46,9 +47,9 @@ const Hero = () => {
   return (
     <Wrapper as={Switcher} forwardedAs="section" breakpoint="20ch" space="1rem">
       <HeroText>
-        <HeroTextOverlap>Hey, I’m Rob, a freelance web developer based in wild west Cornwall.</HeroTextOverlap>
+        <HeroTextOverlap>Hello, I’m Rob, a freelance web developer based in the wild west of England.</HeroTextOverlap>
       </HeroText>
-      <HeroImg sizes={{ ...data.file.childImageSharp.fluid, aspectRatio: 4 / 5 }} fluid={data.file.childImageSharp.fluid} backgroundColor="#E1E5E8" alt="Rob Stanford" />
+      <HeroImg sizes={{ ...data.file.childImageSharp.fluid, aspectRatio: 4 / 5 }} fluid={data.file.childImageSharp.fluid} alt="Rob Stanford" />
     </Wrapper>
   )
 }
