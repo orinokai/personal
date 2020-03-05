@@ -3,37 +3,41 @@ import styled from "styled-components"
 import typography from '../utils/typography'
 import Center from "../common/center"
 import Switcher from "../common/switcher"
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi"
+
 
 const OuterWrapper = styled.footer`
-  background-color: #E1E5E8;
+  background-color: ${typography.options.contrastColor};
 `
 
 const InnerWrapper = styled(Center)`
   max-width: ${props => props.theme.frameWidth};
   padding: ${typography.rhythm(2)} ${props => props.theme.frameGutter};
+`
+
+const NavList = styled(Switcher)`
   list-style: none;
+  margin: 0;
+  max-width: 65ch;
 
-  li {
-    flex-grow: 0;
+  a {
+    text-decoration: none;
+  }
 
-    & + li {
-      margin-left: 8ch;
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
-}
+  svg {
+    margin-right: 0.5rem;
+  }
 `
 
 const Footer = () => (
   <OuterWrapper>
-    <InnerWrapper as={Switcher} forwardAs="ul" breakpoint="40rem" space="1rem">
-      <li><a href="">GitHub</a></li>
-      <li><a href="">LinkedIn</a></li>
-      <li><a href="">Twitter</a></li>
-      <li><a href="">Email</a></li>
+    <InnerWrapper>
+      <NavList forwardedAs="ul" breakpoint="50ch" space="1rem">
+        <li><a href=""><FiGithub />GitHub</a></li>
+        <li><a href=""><FiTwitter />Twitter</a></li>
+        <li><a href=""><FiLinkedin />LinkedIn</a></li>
+        <li><a href=""><FiMail />Email</a></li>
+      </NavList>
     </InnerWrapper>
   </OuterWrapper>
 )

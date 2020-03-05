@@ -4,7 +4,7 @@ import typography from '../utils/typography'
 import Center from "../common/center"
 
 const OuterWrapper = styled.section`
-  background-color: #E1E5E8;
+  background-color: ${typography.options.contrastColor};
 `
 
 const InnerWrapper = styled(Center)`
@@ -39,7 +39,7 @@ const Skills = () => (
       <ul>
         <li>Web Development</li>
         <li>Software Engineering</li>
-        <li>DevOps</li>
+        <li>DevOps Consulting</li>
         <li>Server Admin</li>
         <li>Agile Project Management</li>
         <li>Training & Mentoring</li>

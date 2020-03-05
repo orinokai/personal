@@ -9,9 +9,13 @@ const Wrapper = styled(Center)`
   max-width: ${props => props.theme.frameWidth};
   padding: 0 ${props => props.theme.frameGutter};
 `
-
 const AboutText = styled.div`
   flex-grow: 2;
+
+  p:first-child {
+    border-left: 0.3ch ${typography.options.headerColor} solid;
+    padding-left: 1.5ch;
+  }
 `
 
 const AboutLists = styled(Stack)`

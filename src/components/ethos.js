@@ -11,20 +11,27 @@ const Wrapper = styled(Center)`
 `
 
 const EthosQuote = styled.blockquote`
-  ${typography.scale(1/5)};
-  
+  font-size: 1.2rem;
   font-style: italic;
+  position: relative;
+  margin-left: 1.7rem;
+  margin-top: 1rem;
 
   p:before {
+    position: absolute;
+    top: -1.2rem;
+    left: -2.8rem;
+    font-family: "Poppins";
+    font-size: 8rem;
+    line-height: 1;
     content: open-quote;
-  }
-
-  p:after {
-    content: close-quote;
+    color: lightgray;
+    z-index: -1;
   }
 `
 
 const EthosText = styled.div`
+  margin-top: 1rem;
 
   p:last-child {
     margin-bottom: 0;
