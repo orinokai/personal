@@ -16,6 +16,7 @@ const OuterWrapper = styled.footer`
       100% 100%, /* right bottom */
       0% 100% /* left bottom */
     );
+    padding: 1rem 0 0.5rem 0;
   }
 `
 
