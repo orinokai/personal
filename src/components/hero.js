@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import typography from '../utils/typography'
+import typography from '../styles/typography'
 import Center from "../common/center"
 import Switcher from "../common/switcher"
 import Img from "gatsby-image"
@@ -9,26 +9,57 @@ import Img from "gatsby-image"
 const Wrapper = styled(Center)`
   max-width: ${props => props.theme.frameWidth};
   padding: 0 ${props => props.theme.frameGutter};
-  margin-top: ${typography.rhythm(1)};
-  padding-top: 2vw;
+  margin-top: ${typography.rhythm(2)};
+
+  @media (min-width: 80ch) {
+    padding-top: 2vw;
+  }
 `
 
 const HeroText = styled.h1`
   position: relative;
   margin-bottom: ${typography.rhythm(1)};
   z-index: 1;
-`
 
-const HeroTextOverlap = styled.div`
-  @media (min-width: 80ch) {
-    position: absolute;
-    right: -33%;
-    margin-top: 6rem;
-    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+  @media (min-width: 90ch) {
+    margin-top: ${typography.rhythm(2)};
   }
 `
 
-const HeroImg = styled(Img)`
+const HeroButton = styled.a`
+  margin-top: ${typography.rhythm(2)};
+  border-radius: 4px;
+  line-height: ${typography.rhythm(1)};
+  ${typography.scale(-1/5)};
+  font-family: "Inter";
+  padding: 0.6rem 1.8rem;
+  border: 3px #c93636 solid;
+  color: #c93636;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    color: #e60000;
+    border-color: #e60000;
+  }
+`
+
+const HeroImg = styled.div`
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 105ch) {
+    transform: skew(-2deg) rotate(2deg);
+
+    & > * {
+      width: 110%;
+      height: 103%;
+      position: absolute;
+      top: 50%;
+      transform: skew(2deg) rotate(-2deg) translateY(-50%);
+    }
+  }
 `
 
 const Hero = () => {
@@ -45,11 +76,16 @@ const Hero = () => {
   `)
 
   return (
-    <Wrapper as={Switcher} forwardedAs="section" breakpoint="20ch" space="1rem">
+    <Wrapper as={Switcher} forwardedAs="section" breakpoint="25ch" space="2rem">
       <HeroText>
-        <HeroTextOverlap>Hello, I’m Rob, a freelance web developer based in the wild west of England.</HeroTextOverlap>
+        Hello, I’m Rob, a freelance web developer based in the wild west of England.
+        <div>
+          <HeroButton href="mailto:me@robstanford.com">Email me</HeroButton>
+        </div>
       </HeroText>
-      <HeroImg sizes={{ ...data.file.childImageSharp.fluid, aspectRatio: 4 / 5 }} fluid={data.file.childImageSharp.fluid} alt="Rob Stanford" />
+      <HeroImg>
+        <Img sizes={{ ...data.file.childImageSharp.fluid, aspectRatio: 4 / 5 }} fluid={data.file.childImageSharp.fluid} alt="Rob Stanford" />
+      </HeroImg>
     </Wrapper>
   )
 }

@@ -16,23 +16,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Poppins`,
-            variants: [`400`, `500`, `600`, `700`]
-          },
-          {
-            family: `Roboto`
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: `src/styles/typography`,
       },
     },
     'gatsby-plugin-styled-components',

@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import typography from '../utils/typography'
+import typography from '../styles/typography'
 import Center from "../common/center"
 import Switcher from "../common/switcher"
 import Stack from "../common/stack"
+import { GoQuote } from "react-icons/go"
 
 const Wrapper = styled(Center)`
   max-width: ${props => props.theme.frameWidth};
@@ -13,21 +14,13 @@ const Wrapper = styled(Center)`
 const EthosQuote = styled.blockquote`
   font-size: 1.2rem;
   font-style: italic;
-  position: relative;
-  margin-left: 1.7rem;
+  margin-left: 0.3rem;
   margin-top: 1rem;
+`
 
-  p:before {
-    position: absolute;
-    top: -1.2rem;
-    left: -2.8rem;
-    font-family: "Poppins";
-    font-size: 8rem;
-    line-height: 1;
-    content: open-quote;
-    color: lightgray;
-    z-index: -1;
-  }
+const EthosQuoteMark = styled(GoQuote)`
+  font-size: 2rem;
+  color: #c93636;
 `
 
 const EthosText = styled.div`
@@ -40,9 +33,10 @@ const EthosText = styled.div`
 
 const Ethos = () => (
   <Wrapper as={Stack} forwardedAs="section" space={typography.rhythm(1)}>
-    <h5>Ethos</h5>
+    <h4>Ethos</h4>
     <Switcher breakpoint="40rem" space="1rem">
       <EthosQuote>
+        <EthosQuoteMark />
         <p>Communication is the key to great software development.</p>
       </EthosQuote>
       <EthosText>

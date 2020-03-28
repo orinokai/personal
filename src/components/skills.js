@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import typography from '../utils/typography'
+import typography from '../styles/typography'
 import Center from "../common/center"
 
 const OuterWrapper = styled.section`
-  background-color: ${typography.options.contrastColor};
+  background: radial-gradient(#f2f2f2, ${typography.options.contrastColor});
 `
 
 const InnerWrapper = styled(Center)`
@@ -18,16 +18,17 @@ const InnerWrapper = styled(Center)`
   }
 
   ul > li {
-    ${typography.scale(4/5)};
+    ${typography.scale(3/5)};
+    font-weight: 500;
 
     &:after {
       content: '\\0000a0';
       display: inline-block;
       vertical-align: middle;
-      background-color: black;
-      margin-left: 1ch;
-      width: 2.2ch;
-      height: 2px;
+      background-color: #4f658e;
+      margin-left: 1.2ch;
+      width: 1.4ch;
+      height: 4px;
     }
   }
 `
@@ -35,7 +36,7 @@ const InnerWrapper = styled(Center)`
 const Skills = () => (
   <OuterWrapper>
     <InnerWrapper>
-      <h5>Skills</h5>
+      <h4>Skills</h4>
       <ul>
         <li>Web Development</li>
         <li>Software Engineering</li>

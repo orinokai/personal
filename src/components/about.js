@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import typography from '../utils/typography'
+import typography from '../styles/typography'
 import Center from "../common/center"
 import Switcher from "../common/switcher"
 import Stack from "../common/stack"
@@ -20,8 +20,18 @@ const AboutText = styled.div`
 
 const AboutLists = styled(Stack)`
   line-height: 1rem;
-  h5 { margin-bottom: 1rem }
-  ul { margin-bottom: 0 }
+  h4 { margin-bottom: 1rem }
+  ul {
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    list-style: none;
+  }
+  li::before {
+    content: "• ";
+    color: #c93636;
+    margin-right: 0.25rem;
+    font-size: 0.8rem;
+  }
 `
 
 const About = () => (
@@ -32,7 +42,7 @@ const About = () => (
     </AboutText>
     <AboutLists as="aside" space={typography.rhythm(1)}>
       <article>
-        <h5>Technologies</h5>
+        <h4>Technologies</h4>
         <ul>
           <li>React, Gatsby, GraphQL, Apollo, Node.js</li>
           <li>Wordpress, Laravel, PHP</li>
@@ -42,7 +52,7 @@ const About = () => (
         </ul>
       </article>
       <article>
-        <h5>Likes</h5>
+        <h4>Likes</h4>
         <ul>
           <li>Sea swimming</li>
           <li>Weird teas</li>
