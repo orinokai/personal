@@ -2,9 +2,18 @@ import React from "react"
 import styled from "styled-components"
 import typography from '../styles/typography'
 import Center from "../common/center"
+import Switcher from "../common/switcher"
+import { FiCode, FiGitCommit, FiSettings, FiLifeBuoy, FiServer, FiCalendar } from "react-icons/fi"
 
 const OuterWrapper = styled.section`
-  background: radial-gradient(#f2f2f2, ${typography.options.contrastColor});
+  background: radial-gradient(#f4f4f4, ${typography.options.contrastColor});
+  clip-path: polygon(
+    0 5%, /* left top */
+    100% 0, /* right top */ 
+    100% 95%, /* right bottom */
+    0% 100% /* left bottom */
+  );
+  padding: 1rem 0;
 `
 
 const InnerWrapper = styled(Center)`
@@ -13,38 +22,36 @@ const InnerWrapper = styled(Center)`
 
   ul {
     list-style: none;
-    margin-left: 0;
-    margin-bottom: 0
   }
 
   ul > li {
     ${typography.scale(3/5)};
     font-weight: 500;
-
-    &:after {
-      content: '\\0000a0';
-      display: inline-block;
-      vertical-align: middle;
-      background-color: #4f658e;
-      margin-left: 1.2ch;
-      width: 1.4ch;
-      height: 4px;
-    }
+    margin-bottom: ${typography.rhythm(1)};
   }
+`
+
+const Icon = styled.span`
+  margin-right: 1.8rem;
+  vertical-align: bottom;
 `
 
 const Skills = () => (
   <OuterWrapper>
     <InnerWrapper>
       <h4>Skills</h4>
-      <ul>
-        <li>Web Development</li>
-        <li>Software Engineering</li>
-        <li>DevOps Consulting</li>
-        <li>Server Admin</li>
-        <li>Agile Project Management</li>
-        <li>Training & Mentoring</li>
-      </ul>
+      <Switcher breakpoint="40rem" space="1rem">
+        <ul>
+          <li><Icon><FiCode /></Icon>Web Development</li>
+          <li><Icon><FiGitCommit /></Icon>Software Engineering</li>
+          <li><Icon><FiSettings /></Icon>DevOps Consulting</li>
+        </ul>
+        <ul>
+          <li><Icon><FiServer /></Icon>Server Admin</li>
+          <li><Icon><FiCalendar /></Icon>Project Management</li>
+          <li><Icon><FiLifeBuoy /></Icon>Training & Mentoring</li>
+        </ul>
+      </Switcher>
     </InnerWrapper>
   </OuterWrapper>
 )

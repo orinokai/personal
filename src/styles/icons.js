@@ -1,6 +1,6 @@
 const icons = {
   style: {
-    verticalAlign: '-0.1rem',
+    verticalAlign: '-0.15rem',
   }
 }
 

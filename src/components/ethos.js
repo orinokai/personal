@@ -12,19 +12,26 @@ const Wrapper = styled(Center)`
 `
 
 const EthosQuote = styled.blockquote`
+  position: relative;
   font-size: 1.2rem;
   font-style: italic;
-  margin-left: 0.3rem;
-  margin-top: 1rem;
+  font-weight: 500;
+  margin-top: ${typography.rhythm(1)};
+  padding-left: 3.4rem;
+  line-height: 1.6;
 `
 
 const EthosQuoteMark = styled(GoQuote)`
-  font-size: 2rem;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+  font-size: 2.8rem;
   color: #c93636;
 `
 
 const EthosText = styled.div`
-  margin-top: 1rem;
+  flex-grow: 3;
+  margin-top: ${typography.rhythm(1)};
 
   p:last-child {
     margin-bottom: 0;
@@ -34,7 +41,7 @@ const EthosText = styled.div`
 const Ethos = () => (
   <Wrapper as={Stack} forwardedAs="section" space={typography.rhythm(1)}>
     <h4>Ethos</h4>
-    <Switcher breakpoint="40rem" space="1rem">
+    <Switcher breakpoint="40rem" space="3rem">
       <EthosQuote>
         <EthosQuoteMark />
         <p>Communication is the key to great software development.</p>

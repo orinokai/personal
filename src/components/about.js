@@ -23,19 +23,19 @@ const AboutLists = styled(Stack)`
   h4 { margin-bottom: 1rem }
   ul {
     margin-bottom: 0;
-    margin-left: 0.5rem;
+    margin-left: 0.3rem;
     list-style: none;
   }
   li::before {
     content: "• ";
     color: #c93636;
-    margin-right: 0.25rem;
+    margin-right: 0.4rem;
     font-size: 0.8rem;
   }
 `
 
 const About = () => (
-  <Wrapper as={Switcher} forwardedAs="section" breakpoint="40ch" space="2rem">
+  <Wrapper as={Switcher} forwardedAs="section" breakpoint="40ch" space="3rem">
     <AboutText>
       <p>I help organisations create engaging digital experiences and robust software products.</p>
       <p>Over the last 20 years I have worked with delightful people such as the BBC, Channel 4, MTV, Virgin and Comic Relief. Recent roles include Senior Engineer and Technical Lead at digital agencies in London and Falmouth.</p>

@@ -3,7 +3,7 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "12px",
   baseLineHeight: 1.5,
-  headerFontFamily: ["Mabry Trial", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+  headerFontFamily: ["Mabry", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
   bodyFontFamily: ["Inter", "sans-serif"],
   headerWeight: '500',
   boldWeight: '300',

@@ -40,8 +40,8 @@ const HeroButton = styled.a`
   font-weight: 600;
 
   &:hover {
-    color: #e60000;
-    border-color: #e60000;
+    color: white;
+    background-color: #c93636;
   }
 `
 
@@ -78,9 +78,9 @@ const Hero = () => {
   return (
     <Wrapper as={Switcher} forwardedAs="section" breakpoint="25ch" space="2rem">
       <HeroText>
-        Hello, I’m Rob, a freelance web developer based in the wild west of England.
+        Hello there, I’m Rob, a freelance web developer based in wild west Cornwall.
         <div>
-          <HeroButton href="mailto:me@robstanford.com">Email me</HeroButton>
+          <HeroButton href="mailto:me@robstanford.com">Let's talk</HeroButton>
         </div>
       </HeroText>
       <HeroImg>
