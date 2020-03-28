@@ -32,16 +32,17 @@ const HeroButton = styled.a`
   line-height: ${typography.rhythm(1)};
   ${typography.scale(-1/5)};
   font-family: "Inter";
-  padding: 0.6rem 1.8rem;
+  padding: 0.4rem 1.4rem;
   border: 3px #c93636 solid;
-  color: #c93636;
+    color: white;
+    background-color: #c93636;
   display: inline-block;
   text-decoration: none;
   font-weight: 600;
 
   &:hover {
-    color: white;
-    background-color: #c93636;
+  color: #c93636;
+    background-color: white;
   }
 `
 
@@ -77,7 +78,7 @@ const Hero = () => {
       <HeroText>
         Hello there, I’m Rob, a freelance web developer based in wild west Cornwall.
         <div>
-          <HeroButton href="mailto:me@robstanford.com">Let's talk</HeroButton>
+          <HeroButton href="mailto:me@robstanford.com">Email me</HeroButton>
         </div>
       </HeroText>
       <HeroImg>
