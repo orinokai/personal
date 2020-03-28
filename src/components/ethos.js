@@ -17,15 +17,15 @@ const EthosQuote = styled.blockquote`
   font-style: italic;
   font-weight: 500;
   margin-top: ${typography.rhythm(1)};
-  padding-left: 3.4rem;
+  padding-left: 3rem;
   line-height: 1.6;
 `
 
 const EthosQuoteMark = styled(GoQuote)`
   position: absolute;
-  left: 0;
-  top: -0.4rem;
-  font-size: 2.8rem;
+  left: 0.2rem;
+  top: -0.2rem;
+  font-size: 2rem;
   color: #c93636;
 `
 
