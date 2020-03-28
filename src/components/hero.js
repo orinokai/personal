@@ -50,15 +50,12 @@ const HeroImg = styled.div`
   overflow: hidden;
 
   @media (min-width: 105ch) {
-    transform: skew(-2deg) rotate(2deg);
-
-    & > * {
-      width: 110%;
-      height: 103%;
-      position: absolute;
-      top: 50%;
-      transform: skew(2deg) rotate(-2deg) translateY(-50%);
-    }
+    clip-path: polygon(
+      0% 3%, /* left top */
+      100% 0%, /* right top */ 
+      100% 100%, /* right bottom */
+      0% 97% /* left bottom */
+    );
   }
 `
 

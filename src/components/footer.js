@@ -12,7 +12,7 @@ const OuterWrapper = styled.footer`
   @media (min-width: 105ch) {
     clip-path: polygon(
       0 0%, /* left top */
-      100% 5%, /* right top */ 
+      100% 0%, /* right top */ 
       100% 100%, /* right bottom */
       0% 100% /* left bottom */
     );
@@ -44,7 +44,6 @@ const NavList = styled(Switcher)`
     height: 140%;
     background-color: white;
     z-index: -1;
-    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.05);
   }
 
   @media (min-width: 105ch) {

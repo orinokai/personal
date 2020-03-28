@@ -11,8 +11,8 @@ const OuterWrapper = styled.section`
   @media (min-width: 105ch) {
     clip-path: polygon(
       0 0%, /* left top */
-      100% 2%, /* right top */ 
-      100% 95%, /* right bottom */
+      100% 4%, /* right top */ 
+      100% 96%, /* right bottom */
       0% 100% /* left bottom */
     );
     padding: 1rem 0;
