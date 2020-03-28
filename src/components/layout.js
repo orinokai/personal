@@ -6,6 +6,7 @@ import theme from "../styles/theme"
 import icons from "../styles/icons"
 import typography from '../styles/typography'
 import "typeface-inter"
+import "../styles/fonts.css"
 import Header from "./header"
 import Stack from "../common/stack"
 import Footer from "./footer"
