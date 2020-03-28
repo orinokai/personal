@@ -8,13 +8,15 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi"
 
 const OuterWrapper = styled.footer`
   background: radial-gradient(#f4f4f4, ${typography.options.contrastColor});
-  clip-path: polygon(
-    0 0%, /* left top */
-    100% 5%, /* right top */ 
-    100% 100%, /* right bottom */
-    0% 100% /* left bottom */
-  );
 
+  @media (min-width: 105ch) {
+    clip-path: polygon(
+      0 0%, /* left top */
+      100% 5%, /* right top */ 
+      100% 100%, /* right bottom */
+      0% 100% /* left bottom */
+    );
+  }
 `
 
 const InnerWrapper = styled(Center)`
