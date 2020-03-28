@@ -8,8 +8,8 @@ import { FiCode, FiGitCommit, FiSettings, FiLifeBuoy, FiServer, FiCalendar } fro
 const OuterWrapper = styled.section`
   background: radial-gradient(#f4f4f4, ${typography.options.contrastColor});
   clip-path: polygon(
-    0 5%, /* left top */
-    100% 0, /* right top */ 
+    0 0%, /* left top */
+    100% 2%, /* right top */ 
     100% 95%, /* right bottom */
     0% 100% /* left bottom */
   );
