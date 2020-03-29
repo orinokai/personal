@@ -38,7 +38,7 @@ const About = () => (
   <Wrapper as={Switcher} forwardedAs="section" breakpoint="40ch" space="3rem">
     <AboutText>
       <p>I help organisations create engaging digital experiences and robust software products.</p>
-      <p>My current specialism is full-stack Javascript development, using Node.js and React to create speedy web sites and modular APIs. I have a keen eye for good system design and strive for solutions that are simple, robust and modern.</p>
+      <p>My current specialism is full-stack Javascript development, using Node.js and React to create speedy web sites and modular APIs. I have a keen eye for good systems design and strive for solutions that are simple, robust and modern.</p>
       <p>Over the last 20 years I have worked with delightful people such as the BBC, Channel 4, MTV, Virgin and Comic Relief. Recent roles include Senior Engineer and Technical Lead at digital agencies in London and Falmouth.</p>
     </AboutText>
     <AboutLists as="aside" space={typography.rhythm(1)}>
