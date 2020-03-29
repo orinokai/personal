@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Rob Stanford`,
-    description: `Portfolio site for Rob Stanford, a freelance web developer based in Cornwall.`,
+    title: `Rob Stanford ~ Web developer`,
+    description: `Personal site for Rob Stanford, a freelance web developer specialising in full-stack Javascript.`,
     author: `@orinokai`,
   },
   plugins: [
@@ -25,13 +25,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Rob Stanford`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/save.png`, // This path is relative to the root of the site.
       },
     },
   ],
