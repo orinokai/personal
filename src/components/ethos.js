@@ -44,11 +44,11 @@ const Ethos = () => (
     <Switcher breakpoint="40rem" space="3rem">
       <EthosQuote>
         <EthosQuoteMark />
-        <p>Communication is the key to great software development.</p>
+        <p>Communication and empathy are the core of great software development.</p>
       </EthosQuote>
       <EthosText>
-        <p>I aim to humanise the development process with empathy and discussion to ensure the right features get built and the resulting code is straightforward to maintain.</p>
-        <p>My goal is to create a competitive advantage for my clients by delivering a quality product with a great user experience. I try to work smarter, not harder, using modern platforms and best practices to deliver reliable, thorough work in good time.</p>
+        <p>Software is typically developed for people, with people, to create a human experience. I aim to use discussion and understanding to ensure the right features get built and the resulting code is easy to maintain for future developers.</p>
+        <p>My goal is to create a competitive advantage for my clients by delivering a high quality product and a remarkable user experience. I try to work smarter, not harder, using modern platforms and best practices to deliver reliable, thorough work in good time.</p>
       </EthosText>
     </Switcher>
   </Wrapper>

@@ -28,14 +28,15 @@ const HeroText = styled.h1`
 
 const HeroButton = styled.a`
   margin-top: ${typography.rhythm(2)};
+  margin-bottom: ${typography.rhythm(1)};
   border-radius: 4px;
   line-height: ${typography.rhythm(1)};
   ${typography.scale(-1/5)};
   font-family: "Inter";
   padding: 0.4rem 1.4rem;
   border: 3px #c93636 solid;
-    color: white;
-    background-color: #c93636;
+  color: white;
+  background-color: #c93636;
   display: inline-block;
   text-decoration: none;
   font-weight: 600;

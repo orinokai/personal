@@ -27,6 +27,10 @@ const InnerWrapper = styled(Center)`
     list-style: none;
   }
 
+  ul:first-child {
+    margin-bottom: -0.5rem;
+  }
+
   ul > li {
     ${typography.scale(3/5)};
     font-weight: 500;
