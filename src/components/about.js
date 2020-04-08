@@ -38,15 +38,15 @@ const About = () => (
   <Wrapper as={Switcher} forwardedAs="section" breakpoint="40ch" space="3rem">
     <AboutText>
       <p>I help organisations create engaging digital experiences and robust software products.</p>
-      <p>My current specialism is full-stack Javascript development, using Node.js and React to create speedy web sites and modular APIs. I have a keen eye for good systems design and strive for solutions that are simple, robust and modern.</p>
-      <p>Over the last 20 years I have worked with delightful people such as the BBC, Channel 4, MTV, Virgin and Comic Relief. Recent roles include Senior Engineer and Technical Lead at digital agencies in London and Falmouth.</p>
+      <p>My current specialism is building fast web sites and scalable backends using full-stack Javascript, however my experience extends to many tools and languages. I strive for elegant, idiomatic code, while being keenly aware of the need to balance craft, time and the bottom line.</p>
+      <p>Over the last 20 years I have worked with some amazing folk at the BBC, Channel 4, MTV, Virgin and Comic Relief. Recent roles of note include Senior Engineer and Technical Lead at digital agencies in London and Falmouth.</p>
     </AboutText>
     <AboutLists as="aside" space={typography.rhythm(1)}>
       <article>
         <h4>Technologies</h4>
         <ul>
-          <li>React, Gatsby, GraphQL, Node.js</li>
-          <li>Wordpress, Laravel, PHP</li>
+          <li>React, Node.js, Gatsby, GraphQL</li>
+          <li>Wordpress, Laravel, PHP, MySQL</li>
           <li>Amazon Alexa, Jovo</li>
           <li>Docker, Terraform, Ansible</li>
           <li>Google Cloud Platform, Cloudflare</li>
