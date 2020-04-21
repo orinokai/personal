@@ -45,11 +45,12 @@ const About = () => (
       <article>
         <h4>Technologies</h4>
         <ul>
-          <li>React, Node.js, Gatsby, GraphQL</li>
-          <li>Wordpress, Laravel, PHP, MySQL</li>
-          <li>Amazon Alexa, Jovo</li>
+          <li>React, Gatsby, Jamstack</li>
+          <li>Wordpress, Laravel, PHP</li>
+          <li>GraphQL, Apollo, Node.js</li>
+          <li>MySQL, MongoDB, Redis</li>
+          <li>Alexa, Google Assistant</li>
           <li>Docker, Terraform, Ansible</li>
-          <li>Google Cloud Platform, Cloudflare</li>
         </ul>
       </article>
       <article>
